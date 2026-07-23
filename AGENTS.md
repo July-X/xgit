@@ -149,7 +149,9 @@ xgit/
 ├── package.json / Cargo.toml / pubspec.yaml    # 视技术选型
 ├── docs/                  # 设计文档、ADR、用户手册
 │   ├── adr/               # Architecture Decision Records
-│   └── roadmap.md
+│   ├── research/          # 调研与对照（UGit、gitea-kanban、Git CLI / libgit2 等）
+│   ├── releases/          # 各 roadmap 阶段的发布说明（M{N}-*.md，命名见 roadmap.md §10）
+│   └── roadmap.md         # 后续阶段 1-5 的进入 / 退出门槛
 ├── src/                   # 源代码
 │   ├── main/              # 主进程 / 后端逻辑
 │   ├── renderer/          # 渲染进程 / UI
@@ -161,6 +163,8 @@ xgit/
 ```
 
 新建目录前确认不会和已有约定冲突。
+
+> **后续开发节奏**严格按 [`docs/roadmap.md`](docs/roadmap.md) 推进；不要凭直觉跳阶段；任何跨阶段调整必须先改 roadmap 并更新 §7 决策记录。release-doc 命名与位置见 [roadmap.md §10](docs/roadmap.md)。
 
 ---
 
@@ -221,6 +225,9 @@ xgit/
 - ❌ 提交时夹带与改动无关的文件（编辑器配置、临时笔记）
 - ❌ 在 commit message 里写"AI generated"、"Co-authored-by: Codex"
 - ❌ 用 emoji 当 commit message 的前缀装饰
+- ❌ 不按 [roadmap.md](docs/roadmap.md) 阶段顺序推进或绕过阶段进入 / 退出门槛
+- ❌ 在未跑通当前阶段门槛前就开始下一阶段工作
+- ❌ agent 动任何代码 / ADR / release-doc / 调研文档前没有先读 [roadmap.md §12.5 阶段推进状态表](docs/roadmap.md) 与 [roadmap.md §13.1 防跑偏检查清单](docs/roadmap.md)
 
 ---
 

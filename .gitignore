@@ -1,3 +1,13 @@
+# IDE / agent
+.codex/
+.harness/
+.mavis/
+.opencode/
+.claude/
+.reasonix/
+reasonix.toml
+.vscode/
+
 # Logs
 logs
 *.log
